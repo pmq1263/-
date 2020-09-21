@@ -1,0 +1,15 @@
+n = int(input('请输入参加游戏的人数：'))
+list1 =[]   
+for i in range(1,n+1):
+    list1.append(i)
+    
+def move (list,sep): 
+    
+    for i in range (sep):
+        item = list.pop(0)
+        list.append(item)
+        
+while len(list1) > 2:  #剔除报数为3的人
+    move(list1,2)
+    'kill{}'.format(list1.pop(0))
+print('最终剩余的人的位置：'+ str(list1))
