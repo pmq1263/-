@@ -1,0 +1,10 @@
+li = eval(input('请输入列表：'))
+Set = set(li)
+
+print(Set)
+
+
+list = eval(input('请输入列表：'))
+dic = {}
+list = dic.fromkeys(list).keys()#字典在创建新的字典时，有重复key则覆盖
+print(list)
