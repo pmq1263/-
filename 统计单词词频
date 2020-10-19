@@ -1,0 +1,17 @@
+import re
+with open('Walden.txt','r') as file:
+    #1.1.读取txt文本文件内容
+    file_txt=file.read()
+     
+    #3.分割获得单词列表
+    wordlist= file_txt.split()
+    #4.获得单词频次字典
+    word_dict={}
+    for word in wordlist:
+        if word not in word_dict:
+            word_dict[word]=1
+        else:
+            word_dict[word]=word_dict.get(word)+1
+    #5.对字典进行排序
+    dict_order=dict(sorted(word_dict.items(),key=lambda x:x[1],reverse=True))#reverse为True，降序
+    print(dict_order)
