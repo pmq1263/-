@@ -1,0 +1,7 @@
+list=[1,2,6,0.3,2,0.5,-1,2.4]
+for i in range (len(list)):
+    for j in range(i):
+        if list[j]>list[i]:
+            list[i],list[j] = list[j],list[i]
+print(list)
+    
