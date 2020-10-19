@@ -1,0 +1,8 @@
+import math
+n = int(input())  #设置切分成多少块
+a = 2*math.pi/n   #每块的宽度
+sum = 0           #求和
+for i in range(n):
+    s = abs (math.sin(i*a))*a
+    sum += s
+print(sum)
